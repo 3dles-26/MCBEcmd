@@ -1,13 +1,35 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Pretendard", sans-serif;
 }
 
 body {
     background: white;
     color: #222;
     font-family: Arial, sans-serif;
+}
+
+/* 제목 */
+h1 {
+     border-bottom: 1px solid black;
+
+     margin-left: 5%;
+     margin-right: 5%;
+
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+
+    font-size: 28px;
+}
+
+/* 본문 */
+.main {
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 
@@ -59,6 +81,19 @@ body {
 
 /* 페이지 박스 */
 .page-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 22px;
+    min-height: 140px;
+    cursor: pointer;
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s,
+        border-color 0.15s;
+}
+
+.ancohred-box {
     background: white;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -123,7 +158,8 @@ body {
 
 /* 테이블 */
 table {
-    margin: 5% auto;
+    margin-left: 5%;
+    margin-right: 5%;
     width: 90%;
 }
 
@@ -184,4 +220,9 @@ th, td {
 /* 기본 */
 .center {
     text-align: center;
+}
+
+.date {
+    font-size: 12px;
+    color: gray;
 }
