@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCBE 커맨드 자료집</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 검색창 -->
+    <div class="search-container">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="페이지 제목을 검색하세요..."
+        >
+    </div>
+
+    <!-- 페이지 목록 -->
+    <div class="page-container" id="pageContainer">
+
+        <div
+            class="page-box"
+            data-title="effect의 목록"
+            onclick="goToPage('app/list/effect.html')"
+        >
+            <h2>effect의 목록</h2>
+            <p>/effect 명령어의 목록을 보여줍니다.</p>
+        </div>
+
+    </div>
+
+
+    <script>
+        // 페이지 이동
+        function goToPage(page) {
+            window.location.href = page;
+        }
+
+
+        // 검색 기능
+        const searchInput = document.getElementById("searchInput");
+        const pageBoxes = document.querySelectorAll(".page-box");
+
+        searchInput.addEventListener("input", function () {
+
+            const searchText = searchInput.value
+                .toLowerCase()
+                .trim();
+
+            pageBoxes.forEach(function (box) {
+
+                const title = box
+                    .getAttribute("data-title")
+                    .toLowerCase();
+
+                if (title.includes(searchText)) {
+                    box.style.display = "block";
+                } else {
+                    box.style.display = "none";
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

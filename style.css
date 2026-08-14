@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+
+/* 검색창 영역 */
+.search-container {
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+/* 검색창 */
+#searchInput {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+    padding: 13px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#searchInput:focus {
+    border-color: #888;
+}
+
+
+/* 박스들을 담는 영역 */
+.page-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+    );
+    gap: 20px;
+}
+
+
+/* 페이지 박스 */
+.page-box {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 22px;
+    min-height: 140px;
+    cursor: pointer;
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s,
+        border-color 0.15s;
+}
+
+
+/* 마우스를 올렸을 때 */
+.page-box:hover {
+    transform: translateY(-3px);
+    border-color: #aaa;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* 제목 */
+.page-box h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+
+/* 설명 */
+.page-box p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 홈 버튼 */
+.home {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+/* 홈 이미지 */
+.homeimg {
+    width: 30px;
+    height: 30px;
+}
+
+/* 페이지명 */
+.pagename {
+    font-size: 15px;
+}
+
+/* 상단바 */
+.upbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 테이블 */
+table {
+    margin: 5% auto;
+    width: 90%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: lightgray;
+}
+
+th, td {
+    padding: 10px;
+}
+
+/* 아이콘 */
+.icon {
+    width: 7%;
+}
+
+.iconimg {
+    width: 100%;
+}
+
+/* 이름 */
+.name {
+    width: 13%;
+}
+
+.id {
+    width: 30%;
+}
+
+.num {
+    width: 10%
+}
+
+/* 분수 */
+.fraction {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0 0.2em;
+  }
+
+  .numerator {
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
+  }
+  
+  .denominator {
+    padding-top: 1px;
+  }
+
+/* 기본 */
+.center {
+    text-align: center;
+}
