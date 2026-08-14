@@ -98,8 +98,18 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 22px;
-    min-height: 140px;
+    min-height: 70px;
     cursor: pointer;
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s,
+        border-color 0.15s;
+}
+
+.temp-box {
+    border-radius: 10px;
+    padding: 22px;
+    min-height: 70px;
     transition:
         transform 0.15s,
         box-shadow 0.15s,
@@ -122,10 +132,20 @@ h1 {
     font-size: 20px;
 }
 
+.temp-box h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
 
 /* 설명 */
 .page-box p {
     color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.page-box p {
     font-size: 14px;
     line-height: 1.6;
 }
@@ -182,6 +202,14 @@ th, td {
 }
 
 .iconimg {
+    width: 100%;
+}
+
+.texture {
+    width: 10%;
+}
+
+.textureimg {
     width: 100%;
 }
 
